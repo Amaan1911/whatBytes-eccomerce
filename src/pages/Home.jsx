@@ -18,7 +18,7 @@ export default function Home(){
   });
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-100">
       <Header />
       <main className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="md:col-span-1">
@@ -30,7 +30,9 @@ export default function Home(){
             <div className="card">No products found.</div>
           ) : (
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              {filtered.map(p => <ProductCard key={p.id} product={p} />)}
+              {filtered.map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
             </div>
           )}
         </div>
